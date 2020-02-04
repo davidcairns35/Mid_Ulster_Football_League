@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "328779217821",
+    "firebase_url": "https://midulsterfootballleague.firebaseio.com",
+    "project_id": "midulsterfootballleague",
+    "storage_bucket": "midulsterfootballleague.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328779217821:android:a3258e497b141e47b28d74",
+        "android_client_info": {
+          "package_name": "com.example.midulsterfootballleague"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328779217821-1jp2955dvgl1bj1rkdbv0tc11eg4vi69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOl6kiagBtneR5GoEqsP_fOgLx5wHMHFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328779217821-1jp2955dvgl1bj1rkdbv0tc11eg4vi69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
