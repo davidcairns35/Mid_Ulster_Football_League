@@ -7,18 +7,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Register extends AppCompatActivity {
-    private FirebaseAuth firebaseAuth;
+    private DatabaseReference mDatabase;
     //private ProgressBar progressBar;
 
     @Override
@@ -26,38 +22,37 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference("user");
     }
 
     public void registerUser (View view){
         //getting the email and password
         String email = ((EditText) findViewById(R.id.email)).getText().toString();
+        String username = ((EditText) findViewById(R.id.username)).getText().toString();
         String password = ((EditText) findViewById(R.id.password)).getText().toString();
+        String confirmPassword = ((EditText) findViewById(R.id.confirmPassword)).getText().toString();
         //checking email and password are empty
         if(TextUtils.isEmpty(email)){
             Toast.makeText(this, "Please enter email", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(username)){
+            Toast.makeText(this, "Please enter a valid username", Toast.LENGTH_LONG).show();
             return;
         }
         if(TextUtils.isEmpty(password)){
             Toast.makeText(this, "Please enter password", Toast.LENGTH_LONG).show();
             return;
         }
+        if(TextUtils.isEmpty(confirmPassword)){
+            Toast.makeText(this, "The two passwords don't match", Toast.LENGTH_LONG).show();
+            return;
+        }
         //creating a new user
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        //checking if success
-                        if (task.isSuccessful()){
-                            Toast.makeText(Register.this, "Registered succesfully", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(Register.this, MainActivity.class));
-                            finish();
-                        } else {
-                            FirebaseAuthException e = (FirebaseAuthException) task.getException();
-                            Toast.makeText(Register.this, "Registration failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
+        mDatabase.child("email").setValue(email);
+        mDatabase.child("username").setValue(username);
+        mDatabase.child("password").setValue(password);
+        mDatabase.child("confirm password").setValue(confirmPassword);
     }
 
     public void register (View view){
