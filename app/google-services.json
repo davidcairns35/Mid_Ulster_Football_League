@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "328779217821-rghkd7ntm5b0pste7n6b6secas3tb2b7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.midulsterfootballleague",
+            "certificate_hash": "b26118d1ae97ce244f21e6bddda045ec7bec28f6"
+          }
+        },
+        {
           "client_id": "328779217821-1jp2955dvgl1bj1rkdbv0tc11eg4vi69.apps.googleusercontent.com",
           "client_type": 3
         }
