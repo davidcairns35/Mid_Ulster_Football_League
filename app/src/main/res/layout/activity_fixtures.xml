@@ -6,18 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        layout="@layout/toolbar"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation">
-
-        <TextView
-            android:id="@+id/messages"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:textAlignment="center"
-            android:textSize="30sp" />
     </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

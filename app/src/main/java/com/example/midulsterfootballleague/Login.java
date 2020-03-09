@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
 
+    private androidx.appcompat.widget.Toolbar toolbar;
+
     private View view;
     Button login;
     EditText username, password;
@@ -18,6 +20,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        toolbar = findViewById(R.id.myToolbar);
+        setSupportActionBar(toolbar);
         login = findViewById(R.id.Login);
         username = findViewById(R.id.Username);
         password = findViewById(R.id.Password);

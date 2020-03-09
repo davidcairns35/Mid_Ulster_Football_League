@@ -22,6 +22,7 @@ public class Register extends AppCompatActivity {
     EditText password;
     EditText confirmPassword;
     Button register;
+    private androidx.appcompat.widget.Toolbar toolbar;
 
     FirebaseAuth firebaseAuth;
     //private DatabaseReference mDatabase;
@@ -31,6 +32,8 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        toolbar = findViewById(R.id.myToolbar);
+        setSupportActionBar(toolbar);
 
         email = findViewById(R.id.email);
         username = findViewById(R.id.username);
