@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
@@ -20,11 +21,20 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
         toolbar = findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
+
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         login = findViewById(R.id.Login);
         username = findViewById(R.id.Username);
         password = findViewById(R.id.Password);
+
+
         login.setOnClickListener(new View.OnClickListener()
         {
             @Override

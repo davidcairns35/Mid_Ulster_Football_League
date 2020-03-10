@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="Home"
+        app:showAsAction="always|withText"/>
 
     <item
         android:id="@+id/nav_club"
         android:icon="@drawable/ic_club"
-        android:title="Club" />
+        android:title="Club"
+        app:showAsAction="always|withText"/>
 
     <item
         android:id="@+id/nav_table"
         android:icon="@drawable/ic_table"
-        android:title="Table" />
+        android:title="Table"
+        app:showAsAction="always|withText"/>
 
     <item
         android:id="@+id/nav_inbox"
         android:icon="@drawable/ic_inbox"
-        android:title="Inbox" />
+        android:title="Inbox"
+        app:showAsAction="always|withText"/>
 
 </menu>

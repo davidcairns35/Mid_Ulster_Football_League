@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Fixtures"/>
         <activity android:name=".Register" />
-        <activity android:name=".Login" />
+        <activity android:name=".Login"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".Inbox" />
         <activity android:name=".Table" />
         <activity android:name=".Club" />
