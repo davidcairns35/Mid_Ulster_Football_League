@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,13 +60,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {
         MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.menu,menu);
+        inflater.inflate(R.menu.menu, menu);
         return true;
     }
 
-    public void login (View view){
-        Intent intent = new Intent(MainActivity.this, Login.class);
-        startActivity(intent);
+    @Override
+    public boolean onOptionsItemSelected (@NotNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.Login:
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

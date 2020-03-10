@@ -7,6 +7,13 @@
         android:title="Login"
         android:icon="@drawable/ic_login"
         android:id="@+id/Login"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:title="Logo"
+        android:icon="@mipmap/ic_launcher"
+        android:id="@+id/Logo"
+        app:showAsAction="always"
         />
 </menu>
