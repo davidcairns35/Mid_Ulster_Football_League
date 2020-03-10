@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Fixtures"/>
-        <activity android:name=".Register" />
+        <activity android:name=".Register"
+            android:parentActivityName=".Login"/>
         <activity android:name=".Login"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".Inbox" />

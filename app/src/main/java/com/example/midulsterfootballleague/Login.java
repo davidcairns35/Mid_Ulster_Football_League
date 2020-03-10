@@ -29,6 +29,8 @@ public class Login extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Login");
+
 
         login = findViewById(R.id.Login);
         username = findViewById(R.id.Username);
