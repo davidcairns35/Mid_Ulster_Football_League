@@ -20,15 +20,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity {
     EditText Email;
-    EditText username;
     EditText Password;
     EditText ConfirmPassword;
     Button register;
     private androidx.appcompat.widget.Toolbar toolbar;
 
     FirebaseAuth firebaseAuth;
-    //private DatabaseReference mDatabase;
-    //private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +43,6 @@ public class Register extends AppCompatActivity {
 
 
         Email = findViewById(R.id.Email);
-        username = findViewById(R.id.username);
         Password = findViewById(R.id.password);
         ConfirmPassword = findViewById(R.id.confirmPassword);
         register = findViewById(R.id.register);
