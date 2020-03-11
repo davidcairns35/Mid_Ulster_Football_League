@@ -11,9 +11,10 @@
         />
 
     <item
-        android:title="Logo"
-        android:icon="@mipmap/ic_launcher"
         android:id="@+id/Logo"
-        app:showAsAction="always"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/listPreferredItemHeightLarge"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:title="Logo"
+        app:showAsAction="always" />
 </menu>
