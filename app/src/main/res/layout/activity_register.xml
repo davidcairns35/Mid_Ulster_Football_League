@@ -54,6 +54,5 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        android:id="@+id/include"
         layout="@layout/toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

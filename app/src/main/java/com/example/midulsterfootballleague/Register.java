@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Register extends AppCompatActivity {
+
     EditText Email;
     EditText Password;
     EditText ConfirmPassword;
