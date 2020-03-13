@@ -4,17 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:title="Login"
-        android:icon="@drawable/ic_login"
-        android:id="@+id/Login"
-        app:showAsAction="always"
-        />
-
-    <item
         android:id="@+id/Logo"
         android:layout_width="wrap_content"
         android:layout_height="?attr/listPreferredItemHeightLarge"
-        android:icon="@mipmap/ic_launcher_foreground"
+        android:icon="@drawable/mufl_logo"
         android:title="Logo"
         app:showAsAction="always" />
 </menu>
