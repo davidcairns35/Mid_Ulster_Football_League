@@ -25,7 +25,7 @@ public class Inbox extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.nav_home:
-                        Intent intent = new Intent(Inbox.this, MainActivity.class);
+                        Intent intent = new Intent(Inbox.this, HomePage.class);
                         startActivity(intent);
                         break;
 

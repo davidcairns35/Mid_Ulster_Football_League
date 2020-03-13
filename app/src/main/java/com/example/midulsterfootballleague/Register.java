@@ -83,7 +83,7 @@ public class Register extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(Register.this, "Registered Successfully", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(Register.this, MainActivity.class);
+                            Intent intent = new Intent(Register.this, HomePage.class);
                             startActivity(intent);
                         }else{
                             Toast.makeText(Register.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();

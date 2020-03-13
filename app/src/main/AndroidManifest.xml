@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.midulsterfootballleague">
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Fixtures"/>
-        <activity android:name=".Register"
-            android:parentActivityName=".Login"/>
-        <activity android:name=".Login"
-            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".HomePage"></activity>
+        <activity android:name=".Fixtures" />
+        <activity
+            android:name=".Register"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Inbox" />
         <activity android:name=".Table" />
         <activity android:name=".Club" />
@@ -26,5 +25,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

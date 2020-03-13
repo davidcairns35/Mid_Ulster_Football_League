@@ -2,19 +2,29 @@ package com.example.midulsterfootballleague;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.database.annotations.NotNull;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
+
+    Button login;
+    EditText email, password;
+    FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,55 +34,56 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("Mid Ulster Football League");
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        ActionBar actionBar = getSupportActionBar();
+        getSupportActionBar().setTitle("Login");
+
+
+        login = findViewById(R.id.Login);
+        email = findViewById(R.id.Email);
+        password = findViewById(R.id.Password);
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        login.setOnClickListener(new View.OnClickListener(){
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
-                    case R.id.nav_home:
-                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        break;
+            public void onClick(View view){
+                String Email = email.getText().toString();
+                String Password = password.getText().toString();
 
-                    case R.id.nav_table:
-                        Intent intent2 = new Intent(MainActivity.this, Table.class);
-                        startActivity(intent2);
-                        break;
-
-                    case R.id.nav_club:
-                        Intent intent3 = new Intent(MainActivity.this, Club.class);
-                        startActivity(intent3);
-                        break;
-
-                    case R.id.nav_inbox:
-                        Intent intent4 = new Intent(MainActivity.this, Inbox.class);
-                        startActivity(intent4);
-                        break;
+                if (TextUtils.isEmpty(Email)){
+                    email.setError("Please enter a valid email");
+                    return;
                 }
 
-                return false;
+                if (TextUtils.isEmpty(Password)){
+                    password.setError("Please enter a valid password");
+                    return;
+                }
+
+                if (Password.length() < 8){
+                    password.setError("A password must contain at least 8 characters");
+                    return;
+                }
+
+                firebaseAuth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(MainActivity.this, HomePage.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(MainActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
             }
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu (Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
+    public void register (View view){
+        Intent intent = new Intent(MainActivity.this, Register.class);
+        startActivity(intent);
     }
-
-    @Override
-    public boolean onOptionsItemSelected (@NotNull MenuItem item) {
-        switch (item.getItemId())
-        {
-            case R.id.Login:
-                Intent intent = new Intent(MainActivity.this, Login.class);
-                startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 }
