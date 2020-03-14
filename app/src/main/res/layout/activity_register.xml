@@ -25,8 +25,8 @@
         android:ems="10"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/Email"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintStart_toStartOf="@+id/Name"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
 
     <EditText
         android:id="@+id/confirmPassword"
@@ -53,6 +53,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@id/Email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
     <include
         layout="@layout/toolbar" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
