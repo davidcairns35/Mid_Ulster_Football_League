@@ -110,8 +110,10 @@ public class Register extends AppCompatActivity {
                             DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child(user_id);
 
                             String name = Name.getText().toString();
+                            String email = Email.getText().toString();
 
                             Map newPost = new HashMap();
+                            newPost.put("email", email);
                             newPost.put("name", name);
                             current_user_db.setValue(newPost);
 
