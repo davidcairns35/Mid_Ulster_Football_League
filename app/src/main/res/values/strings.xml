@@ -7,7 +7,11 @@
     <string name="button_fixtures">See fixtures and results</string>
     <string name="enter_email">Enter email</string>
     <string name="confirm_password">Confirm password</string>
-    <string name="team_name">Team name</string>
+    <string name="team_name">Team Name</string>
     <string name="btn_register">Register</string>
     <string name="enter_name">Enter full name</string>
+    <string name="position">Position</string>
+    <string name="goals">GF:GA</string>
+    <string name="played">Played</string>
+    <string name="points">Points</string>
 </resources>

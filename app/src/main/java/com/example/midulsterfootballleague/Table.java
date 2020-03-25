@@ -2,21 +2,27 @@ package com.example.midulsterfootballleague;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.core.Context;
 
 import java.util.ArrayList;
 
@@ -26,8 +32,123 @@ public class Table extends AppCompatActivity {
 
     DatabaseReference databaseReference;
     ListView listView;
-    ArrayList<String> arrayList= new ArrayList<>();
-    ArrayAdapter<String> arrayAdapter;
+    ArrayList<League> leagues = new ArrayList<>();
+    Context c;
+
+    public class FirebaseHelper {
+        DatabaseReference databaseReference;
+        ListView listView;
+        ArrayList<League> leagues = new ArrayList<>();
+        Context c;
+
+
+        public FirebaseHelper(DatabaseReference databaseReference, Context context, ListView listView) {
+            this.databaseReference = databaseReference;
+            this.c = context;
+            this.listView = listView;
+            this.retrieve();
+        }
+
+        public ArrayList<League> retrieve() {
+            databaseReference.child("Division 1").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    leagues.clear();
+                    if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0) {
+                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                            League league = ds.getValue(League.class);
+                            leagues.add(league);
+                        }
+                        adapter = new CustomAdapter(c, leagues);
+                        listView.setAdapter(adapter);
+
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                listView.smoothScrollToPosition(leagues.size());
+                            }
+                        });
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    Log.d("mTag", databaseError.getMessage());
+                    Toast.makeText(Table.this, "ERROR " + databaseError.getMessage(), Toast.LENGTH_LONG).show();
+
+                }
+            });
+
+            return leagues;
+        }
+
+    }
+
+    class CustomAdapter extends BaseAdapter {
+        Context c;
+        ArrayList<League> leagues;
+
+        public CustomAdapter(Context c, ArrayList<League> leagues) {
+            this.c = c;
+            this.leagues = leagues;
+        }
+
+        @Override
+        public int getCount() {
+            return leagues.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return leagues.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            if (convertView == null) {
+                convertView = LayoutInflater.from(c).inflate(R.layout.league_model, parent, false);
+            }
+
+            return convertView;
+        }
+    }
+
+
+
+    /*class CustomAdapter extends BaseAdapter {
+        Context c;
+        ArrayList<League> leagues;
+
+        public  CustomAdapter (Context c, ArrayList<League> leagues) {
+            this.c = c;
+            this.leagues = leagues;
+        }
+
+        @Override
+        public int getCount() {
+            return leagues.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return leagues.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            return null;
+        }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,39 +162,6 @@ public class Table extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setTitle("Division 1");
-
-        databaseReference = FirebaseDatabase.getInstance().getReference("Division 1");
-        listView = (ListView) findViewById(R.id.listViewTxt);
-        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, arrayList);
-        listView.setAdapter(arrayAdapter);
-        databaseReference.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                String value = dataSnapshot.getValue(League.class).toString();
-                arrayList.add(value);
-                arrayAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
