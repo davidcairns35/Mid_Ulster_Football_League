@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:text="@string/Position"
         app:layout_constraintEnd_toStartOf="@+id/TeamName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,6 +23,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
+        android:text="@string/team"
         app:layout_constraintEnd_toStartOf="@+id/Played"
         app:layout_constraintStart_toEndOf="@+id/Position"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:text="@string/Played"
         app:layout_constraintEnd_toStartOf="@+id/Goals"
         app:layout_constraintStart_toEndOf="@+id/TeamName"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:text="@string/Goals"
         app:layout_constraintEnd_toStartOf="@+id/Points"
         app:layout_constraintStart_toEndOf="@+id/Played"
         app:layout_constraintTop_toTopOf="parent" />
@@ -49,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:text="@string/Points"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Goals"
         app:layout_constraintTop_toTopOf="parent" />

@@ -9,26 +9,17 @@
     <include
         layout="@layout/toolbar" />
 
-    <LinearLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
+
+    <ListView
+        android:id="@+id/listViewTxt"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:fastScrollAlwaysVisible="true"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Position">
-
-            <ListView
-                android:id="@+id/listViewTxt"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fastScrollAlwaysVisible="true"
-                app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Position"
-                android:orientation="vertical" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/Position" />
 
     <TextView
         android:id="@+id/Position"
