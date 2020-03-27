@@ -25,7 +25,7 @@ public class FirebaseDatabaseHelper {
 
     public FirebaseDatabaseHelper() {
         database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference().child("League Tables").child("Division 1");
+        databaseReference = database.getReference().child("Division 1");
     }
 
     public void printTable(final DataStatus dataStatus){

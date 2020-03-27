@@ -13,6 +13,7 @@ import java.util.List;
 
 public class RecyclerView_Config {
     private Context mContext;
+
     private LeagueAdapter leagueAdapter;
     public void setConfig(RecyclerView recyclerView, Context context, List<League> leagues, List<String> keys){
         mContext = context;
