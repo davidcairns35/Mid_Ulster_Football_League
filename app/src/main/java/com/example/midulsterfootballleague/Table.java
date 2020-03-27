@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -27,114 +28,12 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.core.Context;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Table extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
-
-    DatabaseReference databaseReference;
-    ListView listView;
-    ArrayList<League> leagues = new ArrayList<>();
-    Context c;
-    FirebaseHelper helper;
-    EditText Position, Team, Played, Points, Goals;
-
-    public class FirebaseHelper {
-        DatabaseReference databaseReference;
-        ListView listView;
-        ArrayList<League> leagues = new ArrayList<>();
-        Table c;
-
-
-        public FirebaseHelper(DatabaseReference databaseReference, Table context, ListView listView) {
-            this.databaseReference = databaseReference;
-            this.c = context;
-            this.listView = listView;
-            this.retrieve();
-        }
-
-        public ArrayList<League> retrieve() {
-            databaseReference.child("Division 1").addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    leagues.clear();
-                    if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0) {
-                        for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                            League league = ds.getValue(League.class);
-                            leagues.add(league);
-                        }
-                        CustomAdapter adapter = new CustomAdapter(c, leagues);
-                        listView.setAdapter(adapter);
-
-                        new Handler().post(new Runnable() {
-                            @Override
-                            public void run() {
-                                listView.smoothScrollToPosition(leagues.size());
-                            }
-                        });
-                    }
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                    Log.d("mTag", databaseError.getMessage());
-                    Toast.makeText(Table.this, "ERROR " + databaseError.getMessage(), Toast.LENGTH_LONG).show();
-
-                }
-            });
-
-            return leagues;
-        }
-
-    }
-
-    class CustomAdapter extends BaseAdapter {
-        Table c;
-        ArrayList<League> leagues;
-
-        public CustomAdapter(Table c, ArrayList<League> leagues) {
-            this.c = c;
-            this.leagues = leagues;
-        }
-
-        @Override
-        public int getCount() {
-            return leagues.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return leagues.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            if (convertView == null) {
-                convertView = LayoutInflater.from(c).inflate(R.layout.league_model, parent, false);
-            }
-
-            TextView Position = convertView.findViewById(R.id.Position);
-            TextView Team = convertView.findViewById(R.id.TeamName);
-            TextView Played = convertView.findViewById(R.id.Played);
-            TextView Goals = convertView.findViewById(R.id.Goals);
-            TextView Points = convertView.findViewById(R.id.Points);
-
-            final League s = (League) this.getItem(position);
-
-            Position.setText(s.getPosition());
-            Team.setText(s.getTeamName());
-            Played.setText(s.getPlayed());
-            Points.setText(s.getPoints());
-            Goals.setText(s.getGoals());
-
-            return convertView;
-        }
-    }
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,13 +48,28 @@ public class Table extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setTitle("Division 1");
 
-        listView = (ListView) findViewById(R.id.listViewTxt);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview_leagues);
+        new FirebaseDatabaseHelper().printTable(new FirebaseDatabaseHelper.DataStatus() {
+            @Override
+            public void DataIsLoaded(List<League> leagues, List<String> keys) {
+                new RecyclerView_Config().setConfig(recyclerView,Table.this, leagues, keys);
+            }
 
-        databaseReference = FirebaseDatabase.getInstance().getReference();
-        helper = new FirebaseHelper(databaseReference, this, listView);
+            @Override
+            public void DataIsInserted() {
 
+            }
 
+            @Override
+            public void DataIsUpdated() {
 
+            }
+
+            @Override
+            public void DataIsDeleted() {
+
+            }
+        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

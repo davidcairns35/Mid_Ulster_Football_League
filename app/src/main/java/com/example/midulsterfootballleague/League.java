@@ -10,23 +10,51 @@ public class League {
     public League() {
     }
 
-    public String getPosition() { return Position; }
+    public League(String position, String points, String played, String goals, String teamName) {
+        Position = position;
+        Points = points;
+        Played = played;
+        Goals = goals;
+        this.teamName = teamName;
+    }
 
-    public void setPosition( String Position) { this.Position = Position; }
+    public String getPosition() {
+        return Position;
+    }
 
-    public String getPoints() { return Points; }
+    public void setPosition(String position) {
+        Position = position;
+    }
 
-    public void setPoints( String Points) { this.Points = Points; }
+    public String getPoints() {
+        return Points;
+    }
 
-    public String getPlayed() { return Played; }
+    public void setPoints(String points) {
+        Points = points;
+    }
 
-    public void setPlayed( String Played) { this.Played = Played; }
+    public String getPlayed() {
+        return Played;
+    }
 
-    public String getGoals() { return Goals; }
+    public void setPlayed(String played) {
+        Played = played;
+    }
 
-    public void setGoals( String Goals) { this.Goals = Goals; }
+    public String getGoals() {
+        return Goals;
+    }
 
-    public String getTeamName() { return teamName; }
+    public void setGoals(String goals) {
+        Goals = goals;
+    }
 
-    public void setTeamName( String teamName) { this.teamName = teamName; }
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
 }
