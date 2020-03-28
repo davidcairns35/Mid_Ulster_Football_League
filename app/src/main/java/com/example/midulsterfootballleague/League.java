@@ -1,15 +1,17 @@
 package com.example.midulsterfootballleague;
 
 public class League {
-    String Goals, Played, Points, Position, teamName;
+    String Goals;
+    String Played;
+    String Points;
+    String Position;
+    String teamName;
 
     public League(){
 
     }
 
-    public String getGoals() {
-        return Goals;
-    }
+    public String getGoals() { return Goals; }
 
     public void setGoals(String goals) {
         Goals = goals;

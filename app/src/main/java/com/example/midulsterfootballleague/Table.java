@@ -46,10 +46,8 @@ public class Table extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
 
-
         toolbar = findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
-
 
         ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setTitle("Division 1");
@@ -60,7 +58,7 @@ public class Table extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseDatabase.getInstance();
-        reference= database.getReference();
+        reference= database.getReference("LeagueTables").child("Division1");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -97,8 +95,12 @@ public class Table extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        FirebaseRecyclerAdapter<League, Holder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<League,
-                Holder>(League.class, R.layout.data, Holder.class, reference) {
+        FirebaseRecyclerAdapter<League, Holder> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<League, Holder>(
+                        League.class,
+                        R.layout.data,
+                        Holder.class,
+                        reference) {
             @Override
             protected void populateViewHolder(Holder holder, League league, int i) {
                 holder.setView(getApplicationContext(), league.getPosition(), league.getTeamName(),
