@@ -17,8 +17,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,7 +35,11 @@ import java.util.List;
 public class Table extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
-    private RecyclerView recyclerView;
+
+
+    RecyclerView recyclerView;
+    DatabaseReference reference;
+    FirebaseDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,28 +54,13 @@ public class Table extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setTitle("Division 1");
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview_leagues);
-        new FirebaseDatabaseHelper().printTable(new FirebaseDatabaseHelper.DataStatus() {
-            @Override
-            public void DataIsLoaded(List<League> leagues, List<String> keys) {
-                new RecyclerView_Config().setConfig(recyclerView,Table.this, leagues, keys);
-            }
+        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView.setHasFixedSize(true);
 
-            @Override
-            public void DataIsInserted() {
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-            }
-
-            @Override
-            public void DataIsUpdated() {
-
-            }
-
-            @Override
-            public void DataIsDeleted() {
-
-            }
-        });
+        database = FirebaseDatabase.getInstance();
+        reference= database.getReference();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -100,6 +91,22 @@ public class Table extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerAdapter<League, Holder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<League,
+                Holder>(League.class, R.layout.data, Holder.class, reference) {
+            @Override
+            protected void populateViewHolder(Holder holder, League league, int i) {
+                holder.setView(getApplicationContext(), league.getPosition(), league.getTeamName(),
+                        league.getPlayed(), league.getGoals(), league.getPoints());
+            }
+        };
+
+        recyclerView.setAdapter(firebaseRecyclerAdapter);
     }
 
 }
