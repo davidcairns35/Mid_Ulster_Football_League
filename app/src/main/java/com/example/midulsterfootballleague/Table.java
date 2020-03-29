@@ -60,6 +60,7 @@ public class Table extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         reference= database.getReference("LeagueTables").child("Division1");
 
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -100,7 +101,7 @@ public class Table extends AppCompatActivity {
                         League.class,
                         R.layout.data,
                         Holder.class,
-                        reference) {
+                        reference.orderByChild("Position")) {
             @Override
             protected void populateViewHolder(Holder holder, League league, int i) {
                 holder.setView(getApplicationContext(), league.getPosition(), league.getTeamName(),
@@ -110,5 +111,4 @@ public class Table extends AppCompatActivity {
 
         recyclerView.setAdapter(firebaseRecyclerAdapter);
     }
-
 }

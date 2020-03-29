@@ -19,7 +19,7 @@ public class Holder extends RecyclerView.ViewHolder {
 
     }
 
-    public void setView(Context context , String Position, String Goals, String Points, String Played, String teamName){
+    public void setView(Context context , String Position, String teamName, String Played, String Goals, String Points){
 
         TextView positiontv = view.findViewById(R.id.Position);
         TextView nametv = view.findViewById(R.id.TeamName);

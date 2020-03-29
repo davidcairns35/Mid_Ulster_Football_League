@@ -1,36 +1,14 @@
 package com.example.midulsterfootballleague;
 
 public class League {
-    String Goals;
-    String Played;
-    String Points;
     String Position;
     String teamName;
+    String Played;
+    String Goals;
+    String Points;
 
     public League(){
 
-    }
-
-    public String getGoals() { return Goals; }
-
-    public void setGoals(String goals) {
-        Goals = goals;
-    }
-
-    public String getPlayed() {
-        return Played;
-    }
-
-    public void setPlayed(String played) {
-        Played = played;
-    }
-
-    public String getPoints() {
-        return Points;
-    }
-
-    public void setPoints(String points) {
-        Points = points;
     }
 
     public String getPosition() {
@@ -47,5 +25,29 @@ public class League {
 
     public void setTeamName(String teamName) {
         this.teamName = teamName;
+    }
+
+    public String getPlayed() {
+        return Played;
+    }
+
+    public void setPlayed(String played) {
+        Played = played;
+    }
+
+    public String getGoals() {
+        return Goals;
+    }
+
+    public void setGoals(String goals) {
+        Goals = goals;
+    }
+
+    public String getPoints() {
+        return Points;
+    }
+
+    public void setPoints(String points) {
+        Points = points;
     }
 }
