@@ -1,11 +1,11 @@
 package com.example.midulsterfootballleague;
 
-import android.content.Context;
-import android.view.View;
-import android.widget.TextView;
+        import android.content.Context;
+        import android.view.View;
+        import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+        import androidx.annotation.NonNull;
+        import androidx.recyclerview.widget.RecyclerView;
 
 public class Holder extends RecyclerView.ViewHolder {
 

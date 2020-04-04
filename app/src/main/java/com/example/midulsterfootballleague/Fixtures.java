@@ -5,20 +5,45 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Fixtures extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
 
+    RecyclerView recyclerView;
+    DatabaseReference reference;
+    FirebaseDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inbox);
+        setContentView(R.layout.activity_fixtures);
+
+
         toolbar = findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
+
+        ActionBar actionBar = getSupportActionBar();
+        getSupportActionBar().setTitle("Division 1 Fixtures");
+
+        recyclerView = findViewById(R.id.recycleview);
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        database = FirebaseDatabase.getInstance();
+        reference= database.getReference("results").child("division1");
+
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -48,6 +73,26 @@ public class Fixtures extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerAdapter<Results, ResultHolder> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<Results, ResultHolder>(
+                        Results.class,
+                        R.layout.results,
+                        ResultHolder.class,
+                        reference) {
+                    @Override
+                    protected void populateViewHolder(ResultHolder resultHolder, Results results, int i) {
+                        resultHolder.setView(getApplicationContext(), results.getHome(), results.getScore(),
+                                results.getAway(), results.getWeek());
+                    }
+                };
+
+        recyclerView.setAdapter(firebaseRecyclerAdapter);
     }
 
 }
