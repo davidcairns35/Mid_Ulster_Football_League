@@ -11,11 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Division1FixtureWeek"
+            android:parentActivityName=".Fixtures"/>
+        <activity android:name=".D1W1"
+            android:parentActivityName=".Division1FixtureWeek"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".HomePage" />
         <activity android:name=".Fixtures" />
-        <activity
-            android:name=".Register"
+        <activity android:name=".Register"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".Inbox" />
         <activity android:name=".Table" />

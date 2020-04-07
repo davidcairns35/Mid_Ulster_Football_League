@@ -4,7 +4,7 @@ public class Results {
     String home;
     String away;
     String score;
-    String week;
+    //String week;
 
     public Results(){
 
@@ -34,11 +34,11 @@ public class Results {
         this.score = score;
     }
 
-    public String getWeek() {
+    /*public String getWeek() {
         return week;
     }
 
     public void setWeek(String week) {
         this.week = week;
-    }
+    } */
 }

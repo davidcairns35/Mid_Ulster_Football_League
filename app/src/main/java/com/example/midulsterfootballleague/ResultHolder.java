@@ -19,16 +19,16 @@ public class ResultHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void setView(Context context , String home, String score, String away, String week){
+    public void setView(Context context, String home, String score, String away){
 
         TextView hometv = view.findViewById(R.id.Home);
         TextView scoretv = view.findViewById(R.id.Score);
         TextView awaytv = view.findViewById(R.id.Away);
-        TextView gameweektv = view.findViewById(R.id.GameWeek);
+        //TextView gameweektv = view.findViewById(R.id.GameWeek);
 
         hometv.setText(home);
         scoretv.setText(score);
         awaytv.setText(away);
-        gameweektv.setText(week);
+        //gameweektv.setText(week);
     }
 }

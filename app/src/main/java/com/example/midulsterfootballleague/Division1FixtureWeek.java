@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Fixtures extends AppCompatActivity {
+public class Division1FixtureWeek extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
 
@@ -27,7 +27,7 @@ public class Fixtures extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fixtures);
+        setContentView(R.layout.activity_division1_fixture_week);
 
 
         toolbar = findViewById(R.id.myToolbar);
@@ -44,22 +44,22 @@ public class Fixtures extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.nav_home:
-                        Intent intent = new Intent(Fixtures.this, HomePage.class);
+                        Intent intent = new Intent(Division1FixtureWeek.this, HomePage.class);
                         startActivity(intent);
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(Fixtures.this, Table.class);
+                        Intent intent2 = new Intent(Division1FixtureWeek.this, Table.class);
                         startActivity(intent2);
                         break;
 
                     case R.id.nav_club:
-                        Intent intent3 = new Intent(Fixtures.this, Club.class);
+                        Intent intent3 = new Intent(Division1FixtureWeek.this, Club.class);
                         startActivity(intent3);
                         break;
 
                     case R.id.nav_inbox:
-                        Intent intent4 = new Intent(Fixtures.this, Inbox.class);
+                        Intent intent4 = new Intent(Division1FixtureWeek.this, Inbox.class);
                         startActivity(intent4);
                         break;
                 }
@@ -69,8 +69,8 @@ public class Fixtures extends AppCompatActivity {
         });
     }
 
-    public void division1 (View view){
-        Intent intent = new Intent(Fixtures.this, Division1FixtureWeek.class);
+    public void week1 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
         startActivity(intent);
     }
 }
