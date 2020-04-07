@@ -33,12 +33,4 @@ public class Results {
     public void setScore(String score) {
         this.score = score;
     }
-
-    /*public String getWeek() {
-        return week;
-    }
-
-    public void setWeek(String week) {
-        this.week = week;
-    } */
 }

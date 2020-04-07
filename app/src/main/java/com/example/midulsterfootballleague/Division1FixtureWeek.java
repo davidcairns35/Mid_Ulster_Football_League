@@ -54,7 +54,7 @@ public class Division1FixtureWeek extends AppCompatActivity {
                         break;
 
                     case R.id.nav_club:
-                        Intent intent3 = new Intent(Division1FixtureWeek.this, Club.class);
+                        Intent intent3 = new Intent(Division1FixtureWeek.this, Fixtures.class);
                         startActivity(intent3);
                         break;
 
@@ -70,6 +70,121 @@ public class Division1FixtureWeek extends AppCompatActivity {
     }
 
     public void week1 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week2 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week3 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week4 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week5 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week6 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week7 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week8 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week9 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week10 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week11 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week12 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week13 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week14 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week15 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week16 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week17 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week18 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week19 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week20 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week21 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }public void week22 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week23 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week24 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week25 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week26 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week27 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week28 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week29 (View view){
+        Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
+        startActivity(intent);
+    }
+    public void week30 (View view){
         Intent intent = new Intent(Division1FixtureWeek.this, D1W1.class);
         startActivity(intent);
     }

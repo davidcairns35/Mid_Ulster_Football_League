@@ -35,7 +35,7 @@ public class Inbox extends AppCompatActivity {
                         break;
 
                     case R.id.nav_club:
-                        Intent intent3 = new Intent(Inbox.this, Club.class);
+                        Intent intent3 = new Intent(Inbox.this, Fixtures.class);
                         startActivity(intent3);
                         break;
 

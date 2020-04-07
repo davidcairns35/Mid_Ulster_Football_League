@@ -33,7 +33,7 @@ public class D1W1 extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
-        getSupportActionBar().setTitle("Division 1 Fixtures");
+        getSupportActionBar().setTitle("Week 1");
 
         recyclerView = findViewById(R.id.recycleview);
         recyclerView.setHasFixedSize(true);
@@ -60,7 +60,7 @@ public class D1W1 extends AppCompatActivity {
                         break;
 
                     case R.id.nav_club:
-                        Intent intent3 = new Intent(D1W1.this, Club.class);
+                        Intent intent3 = new Intent(D1W1.this, Fixtures.class);
                         startActivity(intent3);
                         break;
 

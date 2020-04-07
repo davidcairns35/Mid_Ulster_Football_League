@@ -3,7 +3,6 @@ package com.example.midulsterfootballleague;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -16,7 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Fixtures extends AppCompatActivity {
+public class D1W7 extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
 
@@ -27,15 +26,22 @@ public class Fixtures extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fixtures);
+        setContentView(R.layout.activity_fixture_result_display);
 
 
         toolbar = findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Mid Ulster Football League");
+        getSupportActionBar().setTitle("Week 7");
+
+        recyclerView = findViewById(R.id.recycleview);
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        database = FirebaseDatabase.getInstance();
+        reference= database.getReference("results").child("division1").child("week7");
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -44,22 +50,22 @@ public class Fixtures extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.nav_home:
-                        Intent intent = new Intent(Fixtures.this, HomePage.class);
+                        Intent intent = new Intent(D1W7.this, HomePage.class);
                         startActivity(intent);
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(Fixtures.this, Table.class);
+                        Intent intent2 = new Intent(D1W7.this, Table.class);
                         startActivity(intent2);
                         break;
 
                     case R.id.nav_club:
-                        Intent intent3 = new Intent(Fixtures.this, Fixtures.class);
+                        Intent intent3 = new Intent(D1W7.this, Fixtures.class);
                         startActivity(intent3);
                         break;
 
                     case R.id.nav_inbox:
-                        Intent intent4 = new Intent(Fixtures.this, Inbox.class);
+                        Intent intent4 = new Intent(D1W7.this, Inbox.class);
                         startActivity(intent4);
                         break;
                 }
@@ -69,8 +75,24 @@ public class Fixtures extends AppCompatActivity {
         });
     }
 
-    public void division1 (View view){
-        Intent intent = new Intent(Fixtures.this, Division1FixtureWeek.class);
-        startActivity(intent);
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerAdapter<Results, ResultHolder> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<Results, ResultHolder>(
+                        Results.class,
+                        R.layout.results,
+                        ResultHolder.class,
+                        reference) {
+                    @Override
+                    protected void populateViewHolder(ResultHolder resultHolder, Results results, int i) {
+                        resultHolder.setView(getApplicationContext(), results.getHome(), results.getScore(),
+                                results.getAway());
+                    }
+                };
+
+        recyclerView.setAdapter(firebaseRecyclerAdapter);
     }
+
 }
