@@ -34,7 +34,6 @@ public class Fixtures extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Mid Ulster Football League");
 
 
