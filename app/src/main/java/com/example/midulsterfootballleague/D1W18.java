@@ -33,6 +33,7 @@ public class D1W18 extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Week 18");
 
         recyclerView = findViewById(R.id.recycleview);
