@@ -7,12 +7,7 @@
     tools:context=".HomePage">
 
     <include
-        layout="@layout/toolbar"/>
-
-    <RelativeLayout
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        layout="@layout/toolbar" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -28,6 +23,21 @@
         app:itemIconTint="@android:color/white"
         app:itemTextColor="@android:color/white"
         app:menu="@menu/bottom_navigation_menu"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewhomepage"
+        android:layout_width="409dp"
+        android:layout_height="617dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

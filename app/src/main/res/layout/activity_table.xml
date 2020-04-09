@@ -92,7 +92,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:id="@+id/recyclerviewhomepage"
         android:layout_width="match_parent"
         android:layout_height="548dp"
         android:layout_marginStart="1dp"

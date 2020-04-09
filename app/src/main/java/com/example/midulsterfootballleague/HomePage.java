@@ -8,13 +8,22 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.database.annotations.NotNull;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class HomePage extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
+
+    RecyclerView recyclerView;
+    DatabaseReference reference;
+    FirebaseDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +34,14 @@ public class HomePage extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setTitle("Mid Ulster Football League");
+
+        recyclerView = findViewById(R.id.recyclerviewhomepage);
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        database = FirebaseDatabase.getInstance();
+        reference= database.getReference("news");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -55,6 +72,26 @@ public class HomePage extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerAdapter<HomeGetSet, HomePageHolder> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<HomeGetSet, HomePageHolder>(
+                        HomeGetSet.class,
+                        R.layout.news,
+                        HomePageHolder.class,
+                        reference) {
+                    @Override
+                    protected void populateViewHolder(HomePageHolder homePageHolder, HomeGetSet homeGetSet, int i) {
+                        homePageHolder.setView(getApplicationContext(), homeGetSet.getHeadline(), homeGetSet.getInformation(),
+                                homeGetSet.getDate());
+                    }
+                };
+
+        recyclerView.setAdapter(firebaseRecyclerAdapter);
     }
 
     @Override
