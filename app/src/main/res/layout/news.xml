@@ -17,9 +17,10 @@
 
             <TextView
                 android:id="@+id/Title"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:layout_marginTop="10dp"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -32,7 +33,7 @@
             <TextView
                 android:id="@+id/Information"
                 android:layout_width="350dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:textSize="15sp"/>
 

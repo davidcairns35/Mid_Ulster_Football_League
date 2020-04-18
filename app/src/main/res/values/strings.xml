@@ -14,9 +14,10 @@
     <string name="goals">GF:GA</string>
     <string name="played">Played</string>
     <string name="points">Points</string>
-    <string name="Position"></string>
-    <string name="Goals"></string>
-    <string name="Played"></string>
-    <string name="Points"></string>
-    <string name="team"></string>
+    <string name="Position" />
+    <string name="Goals" />
+    <string name="Played" />
+    <string name="Points" />
+    <string name="team" />
+    <string name="input_placeholder">Write a message</string>
 </resources>
