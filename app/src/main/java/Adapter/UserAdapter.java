@@ -1,6 +1,7 @@
 package Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.midulsterfootballleague.MessageActivity;
 import com.example.midulsterfootballleague.R;
 import com.example.midulsterfootballleague.User;
 
@@ -33,8 +35,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        User user = users.get(position);
+        final User user = users.get(position);
         holder.name.setText(user.getName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view) {
+                Intent intent = new Intent(context, MessageActivity.class);
+                intent.putExtra("userid", user.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

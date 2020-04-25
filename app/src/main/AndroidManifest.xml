@@ -11,72 +11,105 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Division1FixtureWeek"
-            android:parentActivityName=".Fixtures"/>
-        <activity android:name=".D1W1"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W2"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W3"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W4"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W5"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W6"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W7"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W8"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W9"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W10"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W11"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W12"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W13"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W14"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W15"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W16"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W17"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W18"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W19"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W20"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W21"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W22"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W23"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W24"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W25"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W26"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W27"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W28"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W29"
-            android:parentActivityName=".Division1FixtureWeek"/>
-        <activity android:name=".D1W30"
-            android:parentActivityName=".Division1FixtureWeek"/>
+        <activity android:name=".MessageActivity"></activity>
+        <activity
+            android:name="Division1Games.Division1FixtureWeek"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division1Games.D1W1"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W2"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W3"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W4"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W5"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W6"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W7"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W8"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W9"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W10"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W11"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W12"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W13"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W14"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W15"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W16"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W17"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W18"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W19"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W20"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W21"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W22"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W23"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W24"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W25"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W26"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W27"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W28"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W29"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
+        <activity
+            android:name="Division1Games.D1W30"
+            android:parentActivityName="Division1Games.Division1FixtureWeek" />
         <activity android:name=".MainActivity" />
         <activity android:name=".HomePage" />
         <activity android:name=".Fixtures" />
-        <activity android:name=".Register"
+        <activity
+            android:name=".Register"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".Inbox" />
         <activity android:name=".Table" />
