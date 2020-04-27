@@ -9,6 +9,9 @@ public class User {
         this.id = id;
     }
 
+    public User() {
+    }
+
     public String getId() {
         return id;
     }

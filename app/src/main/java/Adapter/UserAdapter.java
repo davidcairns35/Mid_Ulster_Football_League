@@ -18,42 +18,17 @@ import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
-    private Context context;
-    private List<User> users;
+    private Context mContext;
+    private List<User> mUsers;
 
-    public UserAdapter(Context context, List<User> users){
-        this.users = users;
-        this.context = context;
-    }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.user_item, parent, false);
-        return new UserAdapter.ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final User user = users.get(position);
-        holder.name.setText(user.getName());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick (View view) {
-                Intent intent = new Intent(context, MessageActivity.class);
-                intent.putExtra("userid", user.getId());
-                context.startActivity(intent);
-            }
-        });
-    }
-
-    @Override
-    public int getItemCount() {
-        return users.size();
+    public UserAdapter(Context context, List<User> mUsers) {
+        this.mUsers = mUsers;
+        this.mContext = mContext;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
         public TextView name;
 
         public ViewHolder(View itemView) {
@@ -61,5 +36,32 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
             name = itemView.findViewById(R.id.name);
         }
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.user_item, parent, false);
+        return new UserAdapter.ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        final User user = mUsers.get(position);
+        holder.name.setText(user.getName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view) {
+                Intent intent = new Intent(mContext, MessageActivity.class);
+                intent.putExtra("userid", user.getId());
+                mContext.startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return mUsers.size();
     }
 }
