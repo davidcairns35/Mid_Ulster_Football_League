@@ -15,6 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import Model.League;
+import Holder.Holder;
+
 public class Table extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;

@@ -16,6 +16,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import Model.HomeGetSet;
+import Holder.HomePageHolder;
+
 public class HomePage extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;

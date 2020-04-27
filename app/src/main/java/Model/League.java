@@ -1,4 +1,4 @@
-package com.example.midulsterfootballleague;
+package Model;
 
 public class League {
     String Position;

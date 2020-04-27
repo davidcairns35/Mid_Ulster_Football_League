@@ -1,4 +1,4 @@
-package com.example.midulsterfootballleague;
+package Holder;
 
 import android.content.Context;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.midulsterfootballleague.R;
 
 public class ResultHolder extends RecyclerView.ViewHolder {
 

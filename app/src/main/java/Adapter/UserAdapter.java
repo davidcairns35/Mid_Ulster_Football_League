@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.midulsterfootballleague.MessageActivity;
 import com.example.midulsterfootballleague.R;
-import com.example.midulsterfootballleague.User;
+import Model.User;
 
 import java.util.List;
 
