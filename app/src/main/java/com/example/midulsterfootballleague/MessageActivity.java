@@ -90,7 +90,7 @@ public class MessageActivity extends AppCompatActivity {
         text_send = findViewById(R.id.enterMessage);
 
         fuser = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("Users").child(user_id);
+        reference = FirebaseDatabase.getInstance().getReference("Users ").child(user_id);
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override

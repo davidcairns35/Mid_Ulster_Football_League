@@ -53,36 +53,13 @@ public class Inbox extends AppCompatActivity {
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
-        viewPagerAdapter.addFragment(new UsersFragment(), "Users");
+        viewPagerAdapter.addFragment(new ChatsFragment(),"Chats");
+        viewPagerAdapter.addFragment(new UsersFragment(),"Users");
 
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
 
-
-//        ImageButton imageButton = (ImageButton) findViewById(R.id.send);
-//
-//        imageButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                EditText input = (EditText)findViewById(R.id.enterMessage);
-//
-//                // Read the input field and push a new instance
-//                // of ChatMessage to the Firebase database
-//                FirebaseDatabase.getInstance()
-//                        .getReference()
-//                        .push()
-//                        .setValue(new ChatMessages(input.getText().toString(),
-//                                FirebaseAuth.getInstance()
-//                                        .getCurrentUser()
-//                                        .getDisplayName())
-//                        );
-//
-//                // Clear the input
-//                input.setText("");
-//            }
-//        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -120,8 +97,8 @@ public class Inbox extends AppCompatActivity {
         private ArrayList<Fragment> fragments;
         private ArrayList<String> titles;
 
-        ViewPagerAdapter(FragmentManager fragmentManager){
-            super (fragmentManager);
+        ViewPagerAdapter(FragmentManager fm){
+            super (fm);
             this.fragments = new ArrayList<>();
             this.titles = new ArrayList<>();
         }
@@ -129,13 +106,16 @@ public class Inbox extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment getItem(int position) {
+
             return fragments.get(position);
         }
 
         @Override
         public int getCount() {
+
             return fragments.size();
         }
+
         public void addFragment (Fragment fragment, String title) {
             fragments.add(fragment);
             titles.add(title);
@@ -144,6 +124,7 @@ public class Inbox extends AppCompatActivity {
         @Nullable
         @Override
         public CharSequence getPageTitle(int position) {
+
             return titles.get(position);
         }
     }

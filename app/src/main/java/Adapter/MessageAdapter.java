@@ -70,7 +70,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         public ViewHolder(View itemView) {
             super (itemView);
 
-            show_message = itemView.findViewById(R.id.name);
+            show_message = itemView.findViewById(R.id.user_name);
         }
     }
 
