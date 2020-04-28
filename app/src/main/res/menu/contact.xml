@@ -7,7 +7,6 @@
         android:layout_width="wrap_content"
         android:layout_height="?attr/listPreferredItemHeightLarge"
         android:icon="@drawable/ic_contact"
-        android:onClick="contact"
         android:title="Contact"
         app:showAsAction="always" />
 

@@ -14,13 +14,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_right"
             android:text="Hello"
             android:padding="10dp"
             android:textSize="20sp"
-            android:id="@+id/left_message"
+            android:id="@+id/right_message"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:background="@drawable/background_left"/>
 
     </RelativeLayout>
 </RelativeLayout>
