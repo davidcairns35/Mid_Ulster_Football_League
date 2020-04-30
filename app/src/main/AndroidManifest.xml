@@ -11,9 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Contact"
-            android:parentActivityName=".Inbox"></activity>
-        <activity android:name=".MessageActivity" />
         <activity
             android:name="Division1Games.Division1FixtureWeek"
             android:parentActivityName=".Fixtures" />
