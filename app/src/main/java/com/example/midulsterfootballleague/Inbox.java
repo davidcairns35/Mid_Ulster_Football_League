@@ -28,14 +28,14 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.scaledrone.lib.Room;
 
 import java.util.ArrayList;
+
+import Fragments.ChatsFragment;
 
 public class Inbox extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
-    private FirebaseListAdapter<ChatMessages> adapter;
     FirebaseDatabase database;
     DatabaseReference reference;
 
@@ -76,10 +76,51 @@ public class Inbox extends AppCompatActivity {
                 return false;
             }
         });
+
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        ViewPager viewPager = findViewById(R.id.view_pager);
+
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+
+        viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
+        viewPagerAdapter.addFragment(new ChatsFragment(), "Users");
+
+        viewPager.setAdapter(viewPagerAdapter);
+
+        tabLayout.setupWithViewPager(viewPager);
     }
 
-    public void contact (View view){
-        Intent intent = new Intent(Inbox.this, Contact.class);
-        startActivity(intent);
+    class ViewPagerAdapter extends FragmentPagerAdapter{
+
+        private ArrayList<Fragment> fragments;
+        private ArrayList<String> titles;
+
+        ViewPagerAdapter (FragmentManager fm) {
+            super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+            this.fragments = new ArrayList<>();
+            this.titles = new ArrayList<>();
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return fragments.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return fragments.size();
+        }
+
+        public void addFragment (Fragment fragment, String title) {
+            fragments.add(fragment);
+            titles.add(title);
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return titles.get(position);
+        }
     }
+
 }
