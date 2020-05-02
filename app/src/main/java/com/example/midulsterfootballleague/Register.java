@@ -115,6 +115,7 @@ public class Register extends AppCompatActivity {
                             Map newPost = new HashMap();
                             newPost.put("email", email);
                             newPost.put("name", name);
+                            newPost.put("id", user_id);
                             current_user_db.setValue(newPost);
 
                             Toast.makeText(Register.this, "Registered successfully", Toast.LENGTH_LONG).show();
