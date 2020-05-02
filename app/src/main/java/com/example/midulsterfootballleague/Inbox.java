@@ -32,6 +32,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 import Fragments.ChatsFragment;
+import Fragments.UsersFragment;
 
 public class Inbox extends AppCompatActivity {
 
@@ -83,7 +84,7 @@ public class Inbox extends AppCompatActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
-        viewPagerAdapter.addFragment(new ChatsFragment(), "Users");
+        viewPagerAdapter.addFragment(new UsersFragment(), "Users");
 
         viewPager.setAdapter(viewPagerAdapter);
 

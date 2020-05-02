@@ -1,13 +1,12 @@
 package Model;
 
 public class User {
-    public String name, email, id, imageURL;
+    public String name, email, id;
 
-    public User(String name, String email, String id, String imageURL) {
+    public User(String name, String email, String id) {
         this.name = name;
         this.email = email;
         this.id = id;
-        this.imageURL = imageURL;
     }
 
     public User() {
@@ -37,11 +36,4 @@ public class User {
         this.email = email;
     }
 
-    public String getImageURL() {
-        return imageURL;
-    }
-
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-    }
 }
