@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,19 +38,25 @@ public class MessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_message);
 
 
-        toolbar = findViewById(R.id.myToolbar);
+        toolbar = findViewById(R.id.message_toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
 
-        name = findViewById(R.id.user_name);
+        name = findViewById(R.id.user_message_name);
 
         intent = getIntent();
-        String user_id = intent.getStringExtra("id");
+        String userid = intent.getStringExtra("userid");
 
         fuser = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("users").child(user_id);
+        reference = FirebaseDatabase.getInstance().getReference("Users").child(userid);
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
