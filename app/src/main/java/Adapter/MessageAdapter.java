@@ -54,7 +54,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
         holder.show_message.setText(chat.getMessage());
 
-        holder.profile_image.setImageResource(R.drawable.ic_contact);
     }
 
     @Override
@@ -64,14 +63,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView show_message;
-        public ImageView profile_image;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            show_message = itemView.findViewById(R.id.right_message);
-            profile_image = itemView.findViewById(R.id.profile_image);
+            show_message = itemView.findViewById(R.id.show_message);
         }
     }
 
