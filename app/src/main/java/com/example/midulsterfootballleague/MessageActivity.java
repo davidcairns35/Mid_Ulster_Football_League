@@ -37,6 +37,8 @@ public class MessageActivity extends AppCompatActivity {
 
     TextView name;
 
+    String userid;
+
     FirebaseUser fuser;
     DatabaseReference reference;
 
