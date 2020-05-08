@@ -2,16 +2,7 @@ package com.example.midulsterfootballleague;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.format.DateFormat;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,11 +12,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -33,6 +21,7 @@ import java.util.ArrayList;
 
 import Fragments.ChatsFragment;
 import Fragments.UsersFragment;
+import LeagueTables.Division1;
 
 public class Inbox extends AppCompatActivity {
 
@@ -59,7 +48,7 @@ public class Inbox extends AppCompatActivity {
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(Inbox.this, Table.class);
+                        Intent intent2 = new Intent(Inbox.this, Division1.class);
                         startActivity(intent2);
                         break;
 

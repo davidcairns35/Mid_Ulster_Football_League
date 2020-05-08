@@ -1,7 +1,9 @@
-package com.example.midulsterfootballleague;
+package LeagueTables;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -10,15 +12,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.midulsterfootballleague.Fixtures;
+import com.example.midulsterfootballleague.HomePage;
+import com.example.midulsterfootballleague.Inbox;
+import com.example.midulsterfootballleague.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import Model.League;
 import Holder.Holder;
+import Model.League;
 
-public class Table extends AppCompatActivity {
+
+public class Division4 extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
 
@@ -36,7 +43,7 @@ public class Table extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
-        getSupportActionBar().setTitle("Division 1");
+        getSupportActionBar().setTitle("Division 4");
 
         recyclerView = findViewById(R.id.recyclerviewhomepage);
         recyclerView.setHasFixedSize(true);
@@ -44,7 +51,7 @@ public class Table extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseDatabase.getInstance();
-        reference= database.getReference("LeagueTables").child("Division1");
+        reference= database.getReference("LeagueTables").child("Division4");
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -53,22 +60,22 @@ public class Table extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.nav_home:
-                        Intent intent = new Intent(Table.this, HomePage.class);
+                        Intent intent = new Intent(LeagueTables.Division4.this, HomePage.class);
                         startActivity(intent);
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(Table.this, Table.class);
+                        Intent intent2 = new Intent(LeagueTables.Division4.this, LeagueTables.Division4.class);
                         startActivity(intent2);
                         break;
 
                     case R.id.nav_club:
-                        Intent intent3 = new Intent(Table.this, Fixtures.class);
+                        Intent intent3 = new Intent(LeagueTables.Division4.this, Fixtures.class);
                         startActivity(intent3);
                         break;
 
                     case R.id.nav_inbox:
-                        Intent intent4 = new Intent(Table.this, Inbox.class);
+                        Intent intent4 = new Intent(LeagueTables.Division4.this, Inbox.class);
                         startActivity(intent4);
                         break;
                 }
@@ -88,13 +95,48 @@ public class Table extends AppCompatActivity {
                         R.layout.data,
                         Holder.class,
                         reference.orderByChild("Position")) {
-            @Override
-            protected void populateViewHolder(Holder holder, League league, int i) {
-                holder.setView(getApplicationContext(), league.getPosition(), league.getTeamName(),
-                        league.getPlayed(), league.getGoals(), league.getPoints());
-            }
-        };
+                    @Override
+                    protected void populateViewHolder(Holder holder, League league, int i) {
+                        holder.setView(getApplicationContext(), league.getPosition(), league.getTeamName(),
+                                league.getPlayed(), league.getGoals(), league.getPoints());
+                    }
+                };
 
         recyclerView.setAdapter(firebaseRecyclerAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.league_table_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.division1:
+                Intent intent = new Intent(Division4.this, Division1.class);
+                startActivity(intent);
+                break;
+            case R.id.division2:
+                Intent intent2 = new Intent(Division4.this, Division2.class);
+                startActivity(intent2);
+                break;
+            case R.id.division3:
+                Intent intent3 = new Intent(Division4.this, Division3.class);
+                startActivity(intent3);
+                break;
+            case R.id.division4:
+                Intent intent4 = new Intent(Division4.this, Division4.class);
+                startActivity(intent4);
+                break;
+            case R.id.division5:
+                Intent intent5 = new Intent(Division4.this, Division5.class);
+                startActivity(intent5);
+                break;
+
+        }
+        return false;
     }
 }

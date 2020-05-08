@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import LeagueTables.Division1;
+
 public class Club extends AppCompatActivity {
 
     private androidx.appcompat.widget.Toolbar toolbar;
@@ -31,7 +33,7 @@ public class Club extends AppCompatActivity {
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(Club.this, Table.class);
+                        Intent intent2 = new Intent(Club.this, Division1.class);
                         startActivity(intent2);
                         break;
 

@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import Division1Games.Division1FixtureWeek;
+import LeagueTables.Division1;
 
 public class Fixtures extends AppCompatActivity {
 
@@ -48,7 +49,7 @@ public class Fixtures extends AppCompatActivity {
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(Fixtures.this, Table.class);
+                        Intent intent2 = new Intent(Fixtures.this, Division1.class);
                         startActivity(intent2);
                         break;
 

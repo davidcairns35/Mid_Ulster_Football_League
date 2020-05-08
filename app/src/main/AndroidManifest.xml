@@ -114,7 +114,11 @@
             android:name=".Register"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".Inbox" />
-        <activity android:name=".Table" />
+        <activity android:name="LeagueTables.Division1" />
+        <activity android:name="LeagueTables.Division2" />
+        <activity android:name="LeagueTables.Division3" />
+        <activity android:name="LeagueTables.Division4" />
+        <activity android:name="LeagueTables.Division5" />
         <activity android:name=".Club" />
         <activity android:name=".LoadingScreen">
             <intent-filter>

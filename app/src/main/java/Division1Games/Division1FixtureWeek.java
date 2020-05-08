@@ -14,7 +14,7 @@ import com.example.midulsterfootballleague.Fixtures;
 import com.example.midulsterfootballleague.HomePage;
 import com.example.midulsterfootballleague.Inbox;
 import com.example.midulsterfootballleague.R;
-import com.example.midulsterfootballleague.Table;
+import LeagueTables.Division1;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -51,7 +51,7 @@ public class Division1FixtureWeek extends AppCompatActivity {
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(Division1FixtureWeek.this, Table.class);
+                        Intent intent2 = new Intent(Division1FixtureWeek.this, Division1.class);
                         startActivity(intent2);
                         break;
 

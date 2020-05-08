@@ -16,6 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import LeagueTables.Division1;
 import Model.HomeGetSet;
 import Holder.HomePageHolder;
 
@@ -57,7 +58,7 @@ public class HomePage extends AppCompatActivity {
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(HomePage.this, Table.class);
+                        Intent intent2 = new Intent(HomePage.this, Division1.class);
                         startActivity(intent2);
                         break;
 

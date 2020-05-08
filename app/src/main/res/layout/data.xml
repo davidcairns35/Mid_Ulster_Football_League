@@ -19,7 +19,7 @@
                 android:id="@+id/Position"
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:textSize="15sp" />
 
@@ -43,7 +43,7 @@
                 android:id="@+id/Goals"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="45dp"
                 android:layout_marginTop="10dp"
                 android:textSize="15sp" />
 

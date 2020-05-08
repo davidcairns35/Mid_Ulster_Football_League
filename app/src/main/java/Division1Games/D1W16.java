@@ -16,7 +16,7 @@ import com.example.midulsterfootballleague.Inbox;
 import com.example.midulsterfootballleague.R;
 import Holder.ResultHolder;
 import Model.Results;
-import com.example.midulsterfootballleague.Table;
+import LeagueTables.Division1;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
@@ -63,7 +63,7 @@ public class D1W16 extends AppCompatActivity {
                         break;
 
                     case R.id.nav_table:
-                        Intent intent2 = new Intent(D1W16.this, Table.class);
+                        Intent intent2 = new Intent(D1W16.this, Division1.class);
                         startActivity(intent2);
                         break;
 
