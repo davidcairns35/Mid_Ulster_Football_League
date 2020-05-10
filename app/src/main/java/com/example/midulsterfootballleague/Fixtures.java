@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import Division1Games.Division1FixtureWeek;
+import Division1Games.D1W1;
 import LeagueTables.Division1;
 
 public class Fixtures extends AppCompatActivity {
@@ -70,7 +70,7 @@ public class Fixtures extends AppCompatActivity {
     }
 
     public void division1 (View view){
-        Intent intent = new Intent(Fixtures.this, Division1FixtureWeek.class);
+        Intent intent = new Intent(Fixtures.this, D1W1.class);
         startActivity(intent);
     }
 }
