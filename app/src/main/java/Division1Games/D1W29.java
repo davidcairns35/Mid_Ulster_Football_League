@@ -2,6 +2,8 @@ package Division1Games;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -101,6 +103,166 @@ public class D1W29 extends AppCompatActivity {
                 };
 
         recyclerView.setAdapter(firebaseRecyclerAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.result_30, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.week1:
+                Intent intent = new Intent(D1W29.this, D1W1.class);
+                startActivity(intent);
+                break;
+            case R.id.week2:
+                Intent intent2 = new Intent(D1W29.this, D1W2.class);
+                startActivity(intent2);
+                break;
+            case R.id.week3:
+                Intent intent3 = new Intent(D1W29.this, D1W3.class);
+                startActivity(intent3);
+                break;
+            case R.id.week4:
+                Intent intent4 = new Intent(D1W29.this, D1W4.class);
+                startActivity(intent4);
+                break;
+            case R.id.week5:
+                Intent intent5 = new Intent(D1W29.this, D1W5.class);
+                startActivity(intent5);
+                break;
+            case R.id.week6:
+                Intent intent6 = new Intent(D1W29.this, D1W6.class);
+                startActivity(intent6);
+                break;
+
+            case R.id.week7:
+                Intent intent7 = new Intent(D1W29.this, D1W7.class);
+                startActivity(intent7);
+                break;
+
+            case R.id.week8:
+                Intent intent8 = new Intent(D1W29.this, D1W8.class);
+                startActivity(intent8);
+                break;
+
+            case R.id.week9:
+                Intent intent9 = new Intent(D1W29.this, D1W9.class);
+                startActivity(intent9);
+                break;
+
+            case R.id.week10:
+                Intent intent10 = new Intent(D1W29.this, D1W10.class);
+                startActivity(intent10);
+                break;
+
+            case R.id.week11:
+                Intent intent11 = new Intent(D1W29.this, D1W11.class);
+                startActivity(intent11);
+                break;
+
+            case R.id.week12:
+                Intent intent12 = new Intent(D1W29.this, D1W12.class);
+                startActivity(intent12);
+                break;
+
+            case R.id.week13:
+                Intent intent13 = new Intent(D1W29.this, D1W13.class);
+                startActivity(intent13);
+                break;
+
+            case R.id.week14:
+                Intent intent14 = new Intent(D1W29.this, D1W14.class);
+                startActivity(intent14);
+                break;
+
+            case R.id.week15:
+                Intent intent15 = new Intent(D1W29.this, D1W15.class);
+                startActivity(intent15);
+                break;
+
+            case R.id.week16:
+                Intent intent16 = new Intent(D1W29.this, D1W16.class);
+                startActivity(intent16);
+                break;
+
+            case R.id.week17:
+                Intent intent17 = new Intent(D1W29.this, D1W17.class);
+                startActivity(intent17);
+                break;
+
+            case R.id.week18:
+                Intent intent18 = new Intent(D1W29.this, D1W18.class);
+                startActivity(intent18);
+                break;
+
+            case R.id.week19:
+                Intent intent19 = new Intent(D1W29.this, D1W19.class);
+                startActivity(intent19);
+                break;
+
+            case R.id.week20:
+                Intent intent20 = new Intent(D1W29.this, D1W20.class);
+                startActivity(intent20);
+                break;
+
+            case R.id.week21:
+                Intent intent21 = new Intent(D1W29.this, D1W21.class);
+                startActivity(intent21);
+                break;
+
+            case R.id.week22:
+                Intent intent22 = new Intent(D1W29.this, D1W22.class);
+                startActivity(intent22);
+                break;
+
+            case R.id.week23:
+                Intent intent23 = new Intent(D1W29.this, D1W23.class);
+                startActivity(intent23);
+                break;
+
+            case R.id.week24:
+                Intent intent24 = new Intent(D1W29.this, D1W24.class);
+                startActivity(intent24);
+                break;
+
+            case R.id.week25:
+                Intent intent25 = new Intent(D1W29.this, D1W25.class);
+                startActivity(intent25);
+                break;
+
+            case R.id.week26:
+                Intent intent26 = new Intent(D1W29.this, D1W26.class);
+                startActivity(intent26);
+                break;
+
+            case R.id.week27:
+                Intent intent27 = new Intent(D1W29.this, D1W27.class);
+                startActivity(intent27);
+                break;
+
+            case R.id.week28:
+                Intent intent28 = new Intent(D1W29.this, D1W28.class);
+                startActivity(intent28);
+                break;
+
+            case R.id.week29:
+                Intent intent29 = new Intent(D1W29.this, D1W29.class);
+                startActivity(intent29);
+                break;
+
+            case R.id.week30:
+                Intent intent30 = new Intent(D1W29.this, D1W30.class);
+                startActivity(intent30);
+                break;
+
+
+        }
+        return false;
     }
 
 }
