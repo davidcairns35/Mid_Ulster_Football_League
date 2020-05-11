@@ -52,7 +52,7 @@ public class D3W3 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseDatabase.getInstance();
-        reference= database.getReference("results").child("division1").child("week3");
+        reference= database.getReference("results").child("division3").child("week3");
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

@@ -52,7 +52,7 @@ public class D5W27 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseDatabase.getInstance();
-        reference= database.getReference("results").child("division1").child("week27");
+        reference= database.getReference("results").child("division5").child("week27");
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

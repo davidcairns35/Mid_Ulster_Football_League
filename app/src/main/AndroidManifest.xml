@@ -104,6 +104,356 @@
         <activity
             android:name="Division1Games.D1W30"
             android:parentActivityName=".Fixtures" />
+
+        <activity
+            android:name="Division2Games.D2W1"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W2"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W3"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W4"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W5"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W6"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W7"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W8"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W9"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W10"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W11"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W12"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W13"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W14"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W15"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W16"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W17"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W18"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W19"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W20"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W21"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W22"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W23"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W24"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W25"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W26"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W27"
+        android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W28"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division2Games.D2W29"
+            android:parentActivityName=".Fixtures" />
+
+        <activity
+            android:name="Division3Games.D3W1"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W2"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W3"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W4"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W5"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W6"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W7"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W8"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W9"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W10"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W11"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W12"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W13"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W14"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W15"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W16"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W17"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W18"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W19"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W20"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W21"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W22"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W23"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W24"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W25"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W26"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W27"
+        android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division3Games.D3W28"
+            android:parentActivityName=".Fixtures" />
+
+        <activity
+            android:name="Division4Games.D4W1"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W2"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W3"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W4"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W5"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W6"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W7"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W8"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W9"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W10"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W11"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W12"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W13"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W14"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W15"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W16"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W17"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W18"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W19"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W20"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W21"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W22"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W23"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W24"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W25"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W26"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W27"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W28"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W29"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division4Games.D4W30"
+            android:parentActivityName=".Fixtures" />
+
+        <activity
+            android:name="Division5Games.D5W1"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W2"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W3"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W4"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W5"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W6"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W7"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W8"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W9"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W10"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W11"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W12"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W13"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W14"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W15"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W16"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W17"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W18"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W19"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W20"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W21"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W22"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W23"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W24"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W25"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W26"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W27"
+            android:parentActivityName=".Fixtures" />
+        <activity
+            android:name="Division5Games.D5W28"
+            android:parentActivityName=".Fixtures" />
+
         <activity android:name=".MainActivity" />
         <activity android:name=".HomePage" />
         <activity android:name=".Fixtures" />

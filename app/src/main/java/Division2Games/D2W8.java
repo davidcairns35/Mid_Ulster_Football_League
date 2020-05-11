@@ -52,7 +52,7 @@ public class D2W8 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         database = FirebaseDatabase.getInstance();
-        reference= database.getReference("results").child("division1").child("week8");
+        reference= database.getReference("results").child("division2").child("week8");
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
