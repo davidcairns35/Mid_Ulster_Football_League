@@ -15,6 +15,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import Division1Games.D1W1;
+import Division2Games.D2W1;
+import Division3Games.D3W1;
+import Division4Games.D4W1;
+import Division5Games.D5W1;
 import LeagueTables.Division1;
 
 public class Fixtures extends AppCompatActivity {
@@ -71,6 +75,26 @@ public class Fixtures extends AppCompatActivity {
 
     public void division1 (View view){
         Intent intent = new Intent(Fixtures.this, D1W1.class);
+        startActivity(intent);
+    }
+
+    public void division2 (View view){
+        Intent intent = new Intent(Fixtures.this, D2W1.class);
+        startActivity(intent);
+    }
+
+    public void division3 (View view){
+        Intent intent = new Intent(Fixtures.this, D3W1.class);
+        startActivity(intent);
+    }
+
+    public void division4 (View view){
+        Intent intent = new Intent(Fixtures.this, D4W1.class);
+        startActivity(intent);
+    }
+
+    public void division5 (View view){
+        Intent intent = new Intent(Fixtures.this, D5W1.class);
         startActivity(intent);
     }
 }
