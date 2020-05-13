@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="Division1Games.D1W2"
-    android:theme="@style/AppTheme">
+    android:theme="@style/AppTheme"
+    android:background="#fff">
 
     <include
         layout="@layout/toolbar" />

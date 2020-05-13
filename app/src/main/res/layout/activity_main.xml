@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.midulsterfootballleague.MainActivity">
+    tools:context="com.example.midulsterfootballleague.MainActivity"
+    android:background="#fff">
 
     <include
         layout="@layout/toolbar"/>
@@ -51,7 +52,7 @@
         android:id="@+id/Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:onClick="register"
