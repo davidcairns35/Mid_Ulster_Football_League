@@ -359,15 +359,6 @@
         <activity
             android:name="Division4Games.D4W27"
             android:parentActivityName=".Fixtures" />
-        <activity
-            android:name="Division4Games.D4W28"
-            android:parentActivityName=".Fixtures" />
-        <activity
-            android:name="Division4Games.D4W29"
-            android:parentActivityName=".Fixtures" />
-        <activity
-            android:name="Division4Games.D4W30"
-            android:parentActivityName=".Fixtures" />
 
         <activity
             android:name="Division5Games.D5W1"

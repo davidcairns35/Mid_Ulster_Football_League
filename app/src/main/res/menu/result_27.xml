@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/week1"
+        android:title="Week 1"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week2"
+        android:title="Week 2"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week3"
+        android:title="Week 3"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week4"
+        android:title="Week 4"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week5"
+        android:title="Week 5"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week6"
+        android:title="Week 6"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week7"
+        android:title="Week 7"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week8"
+        android:title="Week 8"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week9"
+        android:title="Week 9"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week10"
+        android:title="Week 10"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week11"
+        android:title="Week 11"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week12"
+        android:title="Week 12"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week13"
+        android:title="Week 13"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week14"
+        android:title="Week 14"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week15"
+        android:title="Week 15"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week16"
+        android:title="Week 16"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week17"
+        android:title="Week 17"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week18"
+        android:title="Week 18"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week19"
+        android:title="Week 19"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week20"
+        android:title="Week 20"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week21"
+        android:title="Week 21"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week22"
+        android:title="Week 22"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week23"
+        android:title="Week 23"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week24"
+        android:title="Week 24"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week25"
+        android:title="Week 25"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week26"
+        android:title="Week 26"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week27"
+        android:title="Week 27"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/week28"
+        android:title="Week 28"
+        app:showAsAction="never"/>
+</menu>

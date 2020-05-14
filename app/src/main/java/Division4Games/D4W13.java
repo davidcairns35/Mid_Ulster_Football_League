@@ -109,7 +109,7 @@ public class D4W13 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu (Menu menu) {
         MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.result_30, menu);
+        inflater.inflate(R.menu.result_27, menu);
         return true;
     }
 
@@ -245,23 +245,6 @@ public class D4W13 extends AppCompatActivity {
                 Intent intent27 = new Intent(D4W13.this, D4W27.class);
                 startActivity(intent27);
                 break;
-
-            case R.id.week28:
-                Intent intent28 = new Intent(D4W13.this, D4W28.class);
-                startActivity(intent28);
-                break;
-
-            case R.id.week29:
-                Intent intent29 = new Intent(D4W13.this, D4W29.class);
-                startActivity(intent29);
-                break;
-
-            case R.id.week30:
-                Intent intent30 = new Intent(D4W13.this, D4W30.class);
-                startActivity(intent30);
-                break;
-
-
         }
         return false;
     }
